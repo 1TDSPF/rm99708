@@ -1,12 +1,38 @@
+@import url("./cabecalho.css");
+@import url("./conteudo.css");
+
+html{
+    font-size: 62.7%;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.cabecalho{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
+.tit-sec{
+    text-align: center;
+    font-size: 3rem;
+    margin: 5% 0;
 }
+
+/*breakpoint*/
+
+@media(max-width: 629px){
+
+    .cabecalho{
+        flex-direction: column;    
+    }
+
+    .cabecalho nav{
+        flex-wrap: nowrap;
+    }
+
+    .cabecalho a{
+        font-size: 3rem;
+        padding: 5% 0;
+    }
+}
+
+/*breakpoint*/
