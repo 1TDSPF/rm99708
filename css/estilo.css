@@ -44,3 +44,28 @@ html{
     color: #000000;
     background-color: #fff;
 }
+
+.tit-sec{
+    text-align: center;
+    font-size: 3rem;
+    margin: 5% 0;
+}
+
+.conteudo{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80vw;
+    margin:0 auto;
+}
+
+.conteudo img{
+    max-width: 100%;
+    display: block;
+}
+
+.conteudo > div{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 300px;
+}
+
