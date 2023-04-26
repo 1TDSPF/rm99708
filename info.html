@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/estilo.css">
-        <title>My-Layout</title>
+        <title>Info</title>
     </head>
 
     <body>
@@ -19,39 +19,74 @@
             </nav>
         </header>
 
-        <h2 class="tit-sec">Seção de fotos</h2>
+        <h2 class="tit-sec">INFORMAÇÕES SOBRE LOBOS</h2>
 
         <section class="conteudo">
             <div>
                 <img src="./img/lobo1.jpg" alt="Lobo">
-                <p>Legenda</p>
+                <p>Espécies ameaçadas</p>
             </div>
 
-            <div>
-                <img src="./img/lobo2.jpg" alt="Lobo">
-                <p>Legenda</p>
-            </div>
-
-            <div>
-                <img src="./img/lobo3.jpg" alt="Lobo">
-                <p>Legenda</p>
-            </div>
-
-            <div>
-                <img src="./img/lobo4.jpg" alt="Lobo">
-                <p>Legenda</p>
-            </div>
-
-            <div>
-                <img src="./img/lobo5.jpg" alt="Lobo">
-                <p>Legenda</p>
-            </div>
-
-            <div>
-                <img src="./img/lobo6.jpg" alt="Lobo">
-                <p>Legenda</p>
-            </div>
+           
         </section>
+
+        <table>
+        <thead>
+            <tr>
+                <th>Nome Científico</th>
+                <th>Espécie</th>
+                <th>Habitat</th>
+                <th>Pelagem</th>
+                <th>Incidencia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Canis Lupus</td>
+                <td>Canídeo</td>
+                <td>Florestas</td>
+                <td>Cinza</td>
+                <td>America do Norte</td>
+            </tr>
+            <tr>
+                <td>Canis Rufus</td>
+                <td>Canídeo</td>
+                <td>Florestas</td>
+                <td>Vermelho</td>
+                <td>America do Norte</td>
+            </tr>
+            <tr>
+                <td>Chrysocyon brachyurus</td>
+                <td>Canídeo</td>
+                <td>Matas</td>
+                <td>Marrom</td>
+                <td>America do Sul</td>
+            </tr>
+            <tr>
+                <td>Vulpes vulpes</td>
+                <td>Canídeo</td>
+                <td>Tundra</td>
+                <td>Marrom</td>
+                <td>America do Norte / Europa / Ásia</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">A</td>
+                <!--<td>B</td>!-->
+                <td>C</td>
+                <td>D</td>
+                <td rowspan="2">E</td>
+            </tr>
+            <tr>
+                <td>F</td>
+                <td>G</td>
+                <td>H</td>
+                <td>I</td>
+                <!--<td>J</td>!-->
+            </tr>
+        </tfoot>
+        </table>
 
         <footer class="rodape">
             <h2>Fale conosco</h2>
@@ -61,18 +96,17 @@
                 <a href="#"><img src="./img/social-3.png" alt="Logo twitter"></a>!-->
             </nav>
             <div>
-                <form action="index.html" method="get" onsubmit="return true">
+                <form action="index.html" method="POST" onsubmit="return true">
                     <fieldset>
-                        <legend>Contato</legend>
-                        
+                        <legend>Login</legend>
+                       
                         <div>
-                            <label for="idNm">Nome</label>
-                            <input type="text" name="txtNm" id="idNm" placeholder="Nome" required>
+                            <label for="idEmail">Email</label>
+                            <input type="email" name="txtEmail" id="idEmail" placeholder="Email" required>
                         </div>
 
                         <div>
-                            <!--<label for="idEmail">Email</label>
-                            <input type="email" name="txtEmail" id="idEmail" placeholder="Email" pattern="[A-Za-z]{6}">!-->
+                            
                             <label for="idPass">Senha</label>
                             <input type="password" name="txtPass" id="idPass" placeholder="Pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Precisa conter uma letra maiuscula e pelo menos um caracter especial">
                         </div>
@@ -82,8 +116,10 @@
                             <input type="checkbox" name="chbGrava" id="idGrava" value="grava">
                         </div>
                         
+                        <fieldset>
+                            <legend>Genero</legend>
                         <div>
-                            <label for="">Genero</label>
+                            
                             <select name="selGenero" id="idGenero">
                                 <option selected="selected">Selecione uma opção</option>
                                 <option value="m">Masculino</option>
@@ -91,6 +127,7 @@
                                 <option value="o">Outros</option>
                             </select>
                         </div>
+                        </fieldset>
                         <div>
                             <button type="submit">Login</button>
                             <button type="reset">Limpar</button>
