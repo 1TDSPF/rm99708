@@ -6,6 +6,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/estilo.css">
         <title>Info</title>
+
+        <!--<script>
+            //comentario de linha
+            /*
+            
+            */
+            //declarando variaveis
+            var nr = 10;
+            var nr2 = 5;
+
+            //realizando soma dos valores direto
+            console.log(nr+nr2);
+            //utilizando parseint (uma função interna do js)
+            console.log(parseInt(nr) + parseInt(nr2));
+
+            //realizando subtração
+            console.log("Resultado" + (parseInt(nr) - parseInt(nr2)))
+
+        </script>!-->
     </head>
 
     <body>
@@ -101,13 +120,13 @@
                         <legend>Login</legend>
                        
                         <div>
-                            <label for="idEmail">Email</label>
+                            <label class="lbl-txt" for="idEmail">Email</label>
                             <input type="email" name="txtEmail" id="idEmail" placeholder="Email" required>
                         </div>
 
                         <div>
                             
-                            <label for="idPass">Senha</label>
+                            <label class="lbl-txt" for="idPass">Senha</label>
                             <input type="password" name="txtPass" id="idPass" placeholder="Pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Precisa conter uma letra maiuscula e pelo menos um caracter especial">
                         </div>
 
@@ -129,12 +148,35 @@
                         </div>
                         </fieldset>
                         <div>
-                            <button type="submit">Login</button>
+                            <button onclick="document.write('Login efetuado com sucesso')" type="submit">Login</button>
                             <button type="reset">Limpar</button>
                         </div>
                     </fieldset>
                 </form>
             </div>
         </footer>
+
+        <!--<script>
+            //comentario de linha
+            /*
+            
+            */
+            //declarando variaveis
+            var nr = 10;
+            var nr2 = 5;
+
+            //realizando soma dos valores direto
+            console.log(nr+nr2);
+            //utilizando parseint (uma função interna do js)
+            console.log(parseInt(nr) + parseInt(nr2));
+
+            //realizando subtração
+            console.log("Resultado subtração: " + (parseInt(nr) - parseInt(nr2)))
+            
+            //realizando divisao
+            console.log("Resultado divisao entre: " + (parseInt(nr) / parseInt(nr2)))
+
+        </script>!-->
+
     </body>
 </html>

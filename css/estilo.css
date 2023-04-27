@@ -84,6 +84,7 @@ td[colspan], [rowspan]{
 .rodape div form{
     margin: 0 auto;
     width: 50%;
+    font-size: 2rem;
 }
 
 .rodape div form input[type=email], input[type=password]{
@@ -102,3 +103,40 @@ td[colspan], [rowspan]{
     display: block;
     margin: 0 auto 2% auto ;
 }
+
+.rodape form div fieldset{
+    width: 90%;
+    margin: 2% auto;
+}
+
+.lbl-txt{
+    margin: auto 5%;
+}
+
+.btn{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.rodape form div button{
+    width: 40%;
+    height: 30px;
+    margin: 0 1%;
+    background-color: #de6666;
+}
+
+.rodape button:nth-child(even){
+    background-color: red;
+    color: white;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+}
+
+.rodape button:nth-child(odd){
+    background-color: green;
+    color: white;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+}
+
