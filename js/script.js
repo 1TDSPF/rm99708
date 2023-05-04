@@ -106,15 +106,40 @@ console.log(nome);*/
 // console.table(frutas);
 // console.log("ITEM QUE FICOU NO LOCAL APÓS A REMOÇÃO:  " + frutas[indice]);
 
-let nr1 = [1, 2, 3, 4, 5];
-let nr2 = [6, 7, 8, 9, 10];
+// let nr1 = [1, 2, 3, 4, 5];
+// let nr2 = [6, 7, 8, 9, 10];
 
-console.log(nr1);
-console.log(nr2);
+// console.log(nr1);
+// console.log(nr2);
 
-//concatenando arrays com o operador spread(...)
-let nr3 = [...nr1, ...nr2];
+// //concatenando arrays com o operador spread(...)
+// let nr3 = [...nr1, ...nr2];
 
-nr3.forEach( (nr)=>{
-    console.log("ITEM NOVO DO ARRAY: "+nr)
+// nr3.forEach( (nr)=>{
+//     console.log("ITEM NOVO DO ARRAY: "+nr)
+// } );
+
+
+//convertendo HTMLColections em arrays
+const imgElements = document.getElementsByTagName("img");
+// console.log(imgElements[0].src)
+
+const imgElementsArray = [...imgElements];
+imgElementsArray.forEach( (img)=>{
+    console.log(img);
 } );
+
+//recupere uma colections de elementos do tipo (a).
+//identifique  aqueles que são pertencentes somente ao cabecalho e adicione o atributo style com a propriedade background-color: #ff0000;
+//tire uma print do codigo e da pagina alterada e envie no chat
+
+const aElements = [...document.getElementsByTagName("a")];
+
+aElements.forEach( (a)=>{
+
+    let textA = a.textContent;
+    if(textA == "Home" || textA == "Info" || textA == "Item-3"){
+        a.setAttribute("style", "background-color:#ff0000");
+    }
+} );
+
