@@ -105,3 +105,16 @@ console.log(nome);*/
 // frutas.splice(indice, 2);
 // console.table(frutas);
 // console.log("ITEM QUE FICOU NO LOCAL APÓS A REMOÇÃO:  " + frutas[indice]);
+
+let nr1 = [1, 2, 3, 4, 5];
+let nr2 = [6, 7, 8, 9, 10];
+
+console.log(nr1);
+console.log(nr2);
+
+//concatenando arrays com o operador spread(...)
+let nr3 = [...nr1, ...nr2];
+
+nr3.forEach( (nr)=>{
+    console.log("ITEM NOVO DO ARRAY: "+nr)
+} );
