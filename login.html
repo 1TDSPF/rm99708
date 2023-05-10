@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/login.js" defer></script>
+
+    <title>Entrar</title>
+</head>
+<body>
+    <div>
+        <div id="msgStatus"></div>
+        <form action="index.html" method="GET" onsubmit="return true">
+            <fieldset>
+                <legend>Contato</legend>
+                
+                <div>
+                    <label for="idNm">Nome</label>
+                    <input type="text" name="txtNm" id="idNm" placeholder="Nome" required>
+                </div>
+
+                <div>
+                    <!--<label for="idEmail">Email</label>
+                    <input type="email" name="txtEmail" id="idEmail" placeholder="Email" pattern="[A-Za-z]{6}">!-->
+                    <label for="idPass">Senha</label>
+                    <input type="password" name="txtPass" id="idPass" placeholder="Pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Precisa conter uma letra maiuscula e pelo menos um caracter especial">
+                </div>
+
+                <div>
+                    <label for="idGrava">Gravar Dados</label>
+                    <input type="checkbox" name="chbGrava" id="idGrava" value="grava">
+                </div>
+                
+                <div>
+                    <label for="">Genero</label>
+                    <select name="selGenero" id="idGenero">
+                        <option selected="selected">Selecione uma opção</option>
+                        <option value="m">Masculino</option>
+                        <option value="f">Feminino</option>
+                        <option value="o">Outros</option>
+                    </select>
+                </div>
+                <div class="btn">
+                    <button type="submit" id="btnSubmit">Login</button>
+                    <button type="reset">Limpar</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
