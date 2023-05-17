@@ -20,11 +20,11 @@ console.log(listaDeUsuarios)
 
 addEventListener("click", (evt)=>{
     
+    const inputNome = document.querySelector("#idNm");
+    const inputPass = document.querySelector("#idPass");
     if(evt.target.id == "btnSubmit"){
-        // console.log(evt.target);
-        // console.log(inputNome.value);
-        const inputNome = document.querySelector("#idNm");
-        const inputPass = document.querySelector("#idPass");
+        
+
 
         try{
             
@@ -53,6 +53,16 @@ addEventListener("click", (evt)=>{
 
 
         
+    }
+    else if(evt.target.className =="fa fa-eye" || evt.target.className =="fa fa-eye-slash"){
+        console.log("Evento adicionado");
+        if(inputPass.getAttribute("type") == "password"){
+            inputPass.setAttribute("type", "text");
+            evt.target.setAttribute("class", "fa fa-eye-slash");
+        }else{
+            inputPass.setAttribute("type", "password");
+            evt.target.setAttribute("class", "fa fa-eye");
+        }
     }
 });
 
