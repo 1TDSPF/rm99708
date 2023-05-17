@@ -1,22 +1,40 @@
-const usuario1 = {
-    usuarioNome : "jaul@email.com",
-    usuarioSenha : "12345",
-    usuarioGenero : "m",
-    gravarDados : true
-}
+// const usuario1 = {
+//     usuarioNome : "jaul@email.com",
+//     usuarioSenha : "12345",
+//     usuarioGenero : "m",
+//     gravarDados : true
+// }
 
-const usuario2 = {
-    usuarioNome : "bkzin@email.com",
-    usuarioSenha : "12345",
-    usuarioGenero : "m",
-    gravarDados : true
-}
+// const usuario2 = {
+//     usuarioNome : "bkzin@email.com",
+//     usuarioSenha : "12345",
+//     usuarioGenero : "m",
+//     gravarDados : true
+// }
 
 //gravar uma lista de objetos 
-let listaDeUsuarios = [];
-listaDeUsuarios.push(usuario1);
-listaDeUsuarios.push(usuario2);
-console.log(listaDeUsuarios)
+let listaDeUsuarios = [
+    {
+    nomeCompleto : "jau da selva",
+    usuarioEmail : "jau@email.com",
+    usuarioSenha : "123"
+    },
+
+    {
+        nomeCompleto : "paulin bacana",
+        usuarioEmail : "paulin@email.com",
+        usuarioSenha : "123"
+    },
+
+    {
+        nomeCompleto : "emoji nerdola",
+        usuarioEmail : "emoji@email.com",
+        usuarioSenha : "123"
+    }
+];
+
+//ADICIONANDO A LISTA DE OBJETOS NO LOCAL STORAGE
+localStorage.setItem("listaUser", JSON.stringify(listaDeUsuarios));
 
 addEventListener("click", (evt)=>{
     
@@ -66,3 +84,23 @@ addEventListener("click", (evt)=>{
     }
 });
 
+/*
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⣤⣶⣿⣿⡷⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⣿⣶⣦⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⣤⣴⣤⣤⣤⣤⣤⣤⣤⣤⣶⣿⣟⣛⣛⣻⣟⣛⣁⣤⣤⣤⣤⣤⣤⣤⣤⣬⣿⣛⣛⣛⣛⣛⣿⣶⣤⣤⣤⣤⣤⣤⣤⣤⣤⣴
+⠉⠛⣿⣿⣿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⢿⣿⣿⣿⡿⠿⠿⠿⢿⣿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⢿⣿⣿⡿⠛
+⠀⠀⢸⣿⣿⠀⠀⠀⠀⠀⣀⣠⠤⢶⣤⣀⠀⠀⠀⠀⠀⣸⣿⣿⣿⡇⠀⠀⠀⠀⠘⣦⡄⠀⠀⢀⡀⠀⠀⠀⠀⢀⣿⣿⡇⠀
+⠀⠀⠀⣿⣿⡄⠀⠀⠀⢀⠋⠈⠀⣨⣿⡏⢳⡀⠀⠀⢠⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⣹⢿⡀⠀⠀⠙⣦⠀⠀⠀⢸⣿⣿⠁⠀
+⠀⠀⠀⢿⣿⣇⠀⠀⠀⣾⣀⠄⡐⣿⣿⣿⣸⡇⠀⠀⣾⣿⣿⣿⣿⣿⡆⠀⠀⣤⣴⣿⣼⣷⡄⡄⢀⣼⠀⠀⠀⢸⣿⡿⠀⠀
+⠀⠀⠀⠘⣿⣿⡄⠀⠀⠙⢿⣀⣿⣿⣿⣿⠟⠀⠀⢸⣿⣿⡟⠻⣿⣿⣷⡀⠀⠈⢿⣿⣿⣿⣷⣧⡾⠃⠀⠀⢠⣿⣿⠇⠀⠀
+⠀⠀⠀⠀⠹⣿⣿⣦⣀⠀⠀⠉⠛⠛⠉⠁⠀⣀⣴⣿⣿⠟⠀⠀⠘⢿⣿⣷⣄⠀⠀⠉⠙⠛⠋⠉⠀⠀⣠⣶⣿⡿⠋⠀⠀⠀	
+⠀⠀⠀⠀⠀⣽⠻⢿⣿⣿⣶⣶⣶⣶⣶⣶⣿⣿⣿⠟⠋⠀⠀⠀⠀⠀⠛⢿⣿⣿⣷⣶⣶⣶⣶⣶⣾⣿⣿⡿⡟⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢿⠀⠀⠀⠉⠉⠉⠉⠉⠉⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠉⠉⠉⠉⠉⠉⠀⢲⡟⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠘⣇⠀⠀⠀⠀⠀⠀⠲⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠄⠀⠀⠐⠀⠀⠀⣿⠃⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠹⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⠖⠲⠶⢶⣶⣶⠖⠶⣿⣷⠂⠀⠀⠀⠀⠀⠀⠀⠀⣼⠇⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢻⣄⠀⠀⠀⠀⠀⠀⠀⠀⠙⢻⡄⠀⠀⠀⠀⠀⠀⠀⣿⠟⠀⠀⠀⠀⠀⠀⠀⠀⣠⠏⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠹⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠶⠤⠤⠤⠤⠴⠾⠋⠀⠀⠀⠀⠀⠀⠀⢀⡴⠋⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠲⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠞⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⢧⣄⣀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣴⣾⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠛⠛⠛⠛⠛⠛⠙⠉⠉⠀⠀⠀⠀
+*/
